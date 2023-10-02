@@ -30,4 +30,68 @@ img {
 }
 
 
+#header> div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+nav ul {
+  text-transform: uppercase;
+  list-style-type: none;
+  padding-left: 0;
+ display: flex;
+}
+
+nav ul li {
+padding: 1.125em;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    text-decoration: none;
+    color:black;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color:grey;
+}
+
+.intro-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#story h3 {
+color: black;
+text-align: center;
+}
+
+#story p {
+  color: black;
+  text-align: center;
+}
+
+#reviews {
+  background-color: black;
+}
+
+#reviews h3, p {
+  text-align: center;
+  color: #fff;
+}
+
+.flavour-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+
+footer {
+  background-color: white;
+  text-align: center;
+}

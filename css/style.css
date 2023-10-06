@@ -58,11 +58,33 @@ nav ul li a:focus {
     color:grey;
 }
 
-.intro-grid {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+
+.grid-intro {
+  display: grid;
+  grid-template-areas: 
+    "image1 image1 image1"
+    "image2 image3 image4";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
 }
+
+#image-1 {
+  grid-area: image1;
+}
+
+#image-2 {
+  grid-area: image2;
+}
+
+#image-3 {
+  grid-area: image3;
+}
+
+#image-4 {
+  grid-area: image4;
+}
+
+
 
 #story h3 {
 color: black;

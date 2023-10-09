@@ -66,6 +66,10 @@ nav ul li a:focus {
     "image2 image3 image4";
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
+  padding:4em 0 2em;
+  border-top: 3px;
+  margin: 0 1em;
+
 }
 
 #image-1 {

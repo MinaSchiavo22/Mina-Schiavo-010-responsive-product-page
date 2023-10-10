@@ -1,5 +1,36 @@
 :root {
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+}
 
+p {
+  margin-bottom: 1rem;
+  font-size: var(--font-size-base);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--font-size-xxxl);
+}
+
+h2 {font-size: var(--font-size-xxl);
+}
+
+h3 {font-size: var(--font-size-xl);
+}
+
+h4 {font-size: var(--font-size-lg);
+}
+
+h5 {font-size: var(--font-size-md);
+}
+
+small, .text_small {font-size: var(--font-size-sm);
 }
 
 * {
@@ -27,10 +58,20 @@ body {
 img {
   display: block;
   max-width: 100%;
+  border-radius: 5px;
 }
 
+#flavours img {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 
-#header> div {
+#header span {
+margin: 0 1em;  
+max-width: 30%;
+}
+
+#header div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,6 +99,10 @@ nav ul li a:focus {
     color:grey;
 }
 
+#header {
+  border-bottom: 3px solid #f9f9f9;
+}
+
 
 .grid-intro {
   display: grid;
@@ -66,8 +111,7 @@ nav ul li a:focus {
     "image2 image3 image4";
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
-  padding:4em 0 2em;
-  border-top: 3px;
+  padding:2em 0 2em;
   margin: 0 1em;
 }
 
@@ -87,36 +131,178 @@ nav ul li a:focus {
   grid-area: image4;
 }
 
+@media (min-width: 768px){
+  .grid-intro {
+    display: grid;
+    grid-template-areas: 
+      "image1 image2"
+      "image3 image4";
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  #story .dough {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
 
+  #reviews .wrapper {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 1em;
+  }
 
-#story h3 {
-color: black;
-text-align: center;
+  #flavours div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 0;
+
+  }
+
 }
 
-#story p {
+@media (min-width: 960px){
+  .grid-intro {
+    display: grid;
+    grid-template-areas: 
+      "image1 image2"
+      "image3 image4";
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+  }
+
+#intro-type {
+  display: flex;
+align-content: center;
+}
+
+  #reviews .wrapper {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 5em;
+  }
+
+  #flavours div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+#intro-type {
+  padding-bottom: 2em;
+}
+
+#intro-type h3 {
+  margin: 0 0.4em;
+  text-align: left;
+  padding-bottom: 0em;
+} 
+
+#intro-type small {
+  text-align: left;
+  margin: 0 1em;
+}
+
+#intro-type p {
+  text-align: left;
+  margin: 0 1em;
+  padding-top: 0;
+  padding-bottom: 1em;
+}
+
+#intro-type button {
+  margin: 0 1em;
+  background-color: black;
+  border: none;
+  color: #fff;
+  padding: 7px 5px;
+  border-radius: 5px;
+}
+
+#story {
+  border-top: 3px solid #f9f9f9;
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+#story h3 {
   color: black;
   text-align: center;
 }
 
-#reviews {
-  background-color: black;
+#story p {
+  color: black;
+  text-align: left;
+  margin: 0 1em;
+  padding-top: 1em;
 }
 
-#reviews h3, p {
-  text-align: center;
+#reviews {
+  background-color: black;
+  margin: 0;
   color: #fff;
+  padding-bottom: 2em;
+}
+
+#reviews h3 {
+  color: #fff;
+  display: flex;
+  margin: 0 auto 1em;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+#reviews p {
+  text-align: left;
+  padding-top: 1em;
+  padding-right: 4em;
+}
+
+#reviews i {
+  text-align: left;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  padding-top: 0em;
 }
 
 .flavour-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  padding-top: 1em;
+  padding-bottom: 3em;
+  margin: 0 1em;
+}
+
+#flavours {
+  padding-bottom: 0;
+  padding-top: 1em;
+}
+#flavours article {
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#flavours h3 {
+  text-align: center;
+
+}
+
+#flavours strong {
+  text-align: center;
+}
+
+#flavours p {
+  text-align: center;
+  padding-bottom: 0.3em;
 }
 
 
-
 footer {
+  border-top: 3px solid #f9f9f9;
   background-color: white;
   text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
